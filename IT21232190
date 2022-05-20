@@ -1,0 +1,172 @@
+
+/////////...................IT21232190....................///////////////////////////
+
+#include <iostream>
+#define size 2
+using namespace std;
+
+//Declaring Blog Class
+
+class Doctor //Class Doctor
+{
+	private : //Attributes
+		
+		string D_name;
+		double C_num;
+		string D_ID;
+		
+	public : //Methods
+		
+		Doctor();
+		
+		Doctor(string D_num, double C_num, string D_ID);
+		void setDoctorName (string name);
+		void setContactNum (double num);
+		void setDoctorID (string id);
+		
+		~Doctor();
+};
+
+
+
+class CustomerServiceAgent // Class Customer Service Agent
+{
+	private : //Attributes
+		string agent_ID;
+		string complain_ID;
+		
+	public : //Methods
+		
+		CustomerServiceAgent ();
+		
+		CustomerServiceAgent (string pagent_ID, string cpomplain_ID);
+		void setAgentID (string aid);
+		void setComplainID (string cid);
+		
+		~CustomerServiceAgent(); 
+		
+};
+
+
+
+//Implementing doctor Class
+Doctor::Doctor()
+{
+	string str = (D_name, " ");
+	C_num = 0;
+	string str = (D_ID, " ");
+
+}
+
+Doctor::Doctor(string pD_num, double pC_num, string pD_ID)
+{
+	string str = (D_name, pD_name);
+	C_num = 0;
+	string str = (D_ID, pD_ID);
+
+}
+
+void Doctor::setDoctorName(string name)
+{
+
+}
+
+void Doctor::setContactNum(double num)
+{
+
+}
+
+void Doctor::setDoctorID(string id)
+{
+
+}
+
+
+Doctor::~Doctor()
+{
+	cout<< "Destructor Executed" << endl;
+}
+
+
+
+
+//Implementing Customer Service Agent Class 
+
+CustomerServiceAgent::CustomerServiceAgent()
+{
+	string str = (agent_ID, " ");
+	string str = (complain_ID, " ");
+}
+
+CustomerServiceAgent::CustomerServiceAgent(string pagent_ID, string pcomplain_ID)
+{
+	string str = (agent_ID, pagent_ID);
+	string str = (complain_ID, pcomplain_ID);
+
+}
+
+void CustomerServiceAgent::displayAgentDetails()
+{
+    cout<<"Agent ID : "<< agent_ID<< endl;
+    cout<<"Complain ID : "<< complain_ID<< endl;
+}
+
+
+CustomerServiceAgent::~CustomerServiceAgent()
+{
+	cout<< "Destructor Executed" << endl;
+}
+
+
+
+
+#include <iostream>   //main program
+using namespace std;
+#include "Blog.h"
+#include "Enrollment.h"
+#include "Registered_Customer.h"
+#include "Trainer.h"
+#include "User.h"
+#include "Doctor.h"
+#include "Order.h"
+#include "Equipment.h"
+#include "FoodSupplement.h"
+#include "CustomerServiceAgent.h"
+
+int main(){
+//Creating objects
+    Registered_Customer* r1 = new Registered_Customer("Supun Imesh", "supunimesh00@gmail.com", "BSK1065", 0784629654);
+    Trainer* t1 = new Trainer("Deepal Alahakon", "T10956", "Deepal954@321");
+    CustomerServiceAgent* c1 = new CustomerServiceAgent("A5065", "C1099");
+    Doctor* d1 = new Doctor("Lalith Kumara", 0713973213, "D50987");
+    Blog *b1 = new Blog("B1050", "Healthy Foods", "2022-05-09", u1);
+    User *u1 = new User("Kavindu Thenuka", "kavinduthenu79@gmail.com", b1);
+    Order *o1 = new Order("O213", "2022-05-09", 1200, r1, e1, f1)
+    Equipment *e1 = new Equipment("E02", 6, 200);
+    FoodSupplement *f1 = new FoodSupplement("F03", 2, 600);
+
+    r1->printDetails();
+    cout<<"\n*****************\n"<<endl;
+    t1->displaySessionDetails();
+    cout<<"\n*****************\n"<<endl;
+    c1->displayAgentDetails();
+    cout<<"\n*****************\n"<<endl;
+    b1->displayBlog();
+    cout<<"\n*****************\n"<<endl;
+    e1->DisplayEquipmentDetails();
+    cout<<"\n*****************\n"<<endl;
+    f1->DisplayFoodSupplementDetails();
+
+    //Delete objects
+    delete r1;
+    delete t1;
+    delete c1;
+    delete b1;
+    delete e1;
+    delete f1;
+
+    return 0;
+}
+
+...................................IT21232190.................................
+
