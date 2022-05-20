@@ -1,0 +1,175 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+//classes
+class Payment;
+class Equipment;
+class Food_supplement;
+
+
+//Payment class
+class Payment{
+
+    private :
+        string paymentID;
+        double Amount;
+
+    public :
+        Payment();
+        Payment(string ppaymentID,double pAmount);
+        void DisplayPaymentDetails();
+        double calAmount();
+        void DisplayAmount();
+        ~Payment();
+
+};
+
+//Equipment class
+class Equipment{
+
+    private :
+        string EquipmentID;
+        int Quantity;
+        double Price;
+
+    public :
+        Equipment();
+        Equipment(string pEquipmentID, int pQuantity, double pPrice);
+        void DisplayEquipmentDetails();
+        void addEquipment();
+        void updateEquipment();
+        ~Equipment();
+
+};
+
+//Food_supplement class
+class Food_supplement{
+
+     private :
+        string FSupplementID;
+        int Quantity;
+        double Price;
+
+    public :
+        Food_supplement();
+        Food_supplement(string pFSupplementID, int pQuantity, double pPrice );
+        void DisplayFoodSupplementDetails();
+        void addFoodSupplement();
+        void updateFoodSupplement();
+        ~Food_supplement();
+
+};
+
+
+
+//Implementing Payment class
+Payment::Payment()
+{
+
+}
+
+Payment::Payment(string ppaymentID,double pAmount)
+{
+   paymentID =  ppaymentID;
+   Amount = pAmount;
+   cout<<"Constructor executed" << endl;
+}
+
+void Payment::DisplayPaymentDetails()
+{
+    cout<<"Payment ID:"<<paymentID<<endl;
+    cout<<"Amount:"<<Amount<<endl;
+}
+
+double Payment:: calcAmount()
+{
+    return 0.0;
+}
+
+void Payment::DisplayAmount()
+{
+    cout<<"Amount:"<<calcAmount<<endl;
+}
+
+Payment::~Payment()
+{
+   cout << "Payment deleted" << endl;
+}
+
+
+
+//Implementing Equipment class
+Equipment::Equipment()
+{
+
+}
+
+Equipment::Equipment(string pEquipmentID, int pQuantity, double pPrice)
+{
+    EquipmentID = pEquipmentID;
+    Quantity = pQuantity;
+    Price = pPrice;
+    cout<<"Constructor executed" << endl;
+}
+
+void Equipment::DisplayEquipmentDetails()
+{
+    cout<<"Equipment ID:"<<EquipmentID<<endl;
+    cout<<"Equipment quantity:"<<Quantity<<endl;
+    cout<<"Equipment price:"<<Price<<endl;
+}
+
+void Equipment::addEquipment()
+{
+
+}
+
+void Equipment::updateEquipment()
+{
+
+}
+
+Equipment::~Equipment()
+{
+    cout << "Equipment deleted" << endl;
+}
+
+
+////Implementing Food_supplement class
+Food_supplement::Food_supplement()
+{
+
+}
+
+Food_supplement::Food_supplement(string pFSupplementID, int pQuantity, double pPrice )
+{
+    FSupplementID = pFSupplementID;
+    Quantity = pQuantity;
+    Price = pPrice;
+    cout<<"Constructor executed" << endl;
+}
+
+void Food_supplement::DisplayFoodSupplementDetails()
+{
+    cout<<"Food Supplement ID:"<<FSupplementID<<endl;
+    cout<<"Food Supplement quantity:"<<Quantity<<endl;
+    cout<<"Food Supplement price:"<<Price<<endl;
+}
+
+void Food_supplement::addFoodSupplement()
+{
+
+}
+
+void Food_supplement::updateFoodSupplement()
+{
+
+}
+
+Food_supplement::~Food_supplement()
+{
+    cout << "Food_supplement deleted" << endl;
+}
+
+
