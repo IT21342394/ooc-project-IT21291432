@@ -1,4 +1,4 @@
---------------------------------------IT21291432--------------------------------------
+-------------------------------------------------------------IT21291432------------------------------------------------------------
 #include <iostream>
 #define size 2
 using namespace std;
@@ -191,7 +191,7 @@ User::~User() {
     cout << "User deleted" << endl;
 }
 
---------------------------------------IT21294266--------------------------------------
+-------------------------------------------------------------IT21294266--------------------------------------------------------------------
 //diclaring Financial Manager Class
 class FinancialManager{
 private:
@@ -274,51 +274,7 @@ Order::~Order(){
     cout << "Order deleted" << endl;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#include <iostream>
-using namespace std;
-#include "Blog.h"
-#include "Enrollment.h"
-#include "Registered_Customer.h"
-#include "Trainer.h"
-#include "User.h"
-#include "Doctor.h"
-#include "Order.h"
-#include "Equipment.h"
-#include "FoodSupplement.h"
-#include "CustomerServiceAgent.h"
-
+//Main function
 int main(){
 //Creating objects
     Registered_Customer* r1 = new Registered_Customer("Supun Imesh", "supunimesh00@gmail.com", "BSK1065", 0784629654);
