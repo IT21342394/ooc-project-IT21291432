@@ -191,9 +191,88 @@ User::~User() {
     cout << "User deleted" << endl;
 }
 
---------------------------------------IT21291432--------------------------------------
+--------------------------------------IT21294266--------------------------------------
+//diclaring Financial Manager Class
+class FinancialManager{
+private:
+    string managerID;
+    double salary;
+    double totalSalesPrice;
+    double totalCost;
+public:
+    FinancialManager();
+    FinancialManager(string pmanagerID, double psalary, double ptotalSalesPrice, double ptotalCost);
+    double calcProfitOfSales();
+    void displayProfit();
+    ~FinancialManager();
+};
 
+//Implementing Financial Manager Class
+FinancialManager::FinancialManager(){
+    managerID = "No ID entered";
+    salary = 0.0;
+    totalSalesPrice = 0.0;
+    totalCost = 0.0;
+}
+FinancialManager::FinancialManager(string pmanagerID, double psalary, double ptotalSalesPrice, double ptotalCost){
+    managerID = pmanagerID;
+    salary = psalary;
+    totalSalesPrice = ptotalSalesPrice;
+    totalCost = ptotalCost;
+    cout << "Constructor executed" << endl;
+}
+double FinancialManager::calcProfitOfSales(Payment *p){
+    totalSalesPrice = *p -> calAmount();
+}
+void FinancialManager::displayProfit(){}
+FinancialManager::FinancialManager(){
+    cout << "Financial Manager deleted" << endl;
+}
 
+//Declaring Order Class
+class Order{
+private:
+    string orderID;
+    string orderDate;
+    double totalPrice;
+    Registered_Customer * regCus[size];
+    Equipment *equip;
+    Food_Supplement *supple;
+    Payment *pay;
+public:
+    Order();
+    Order(string porderId, string porderDate, double ptotalPrice, Registered_Customer * pregCus, Equipment *pequip, Food_Supplement *psupple);
+    void addOrderDetails();
+    double calcTotal();
+    void displayOrderDetails();
+    void addPayment();
+    ~Order();
+};
+
+//Implementing Order Class
+Order::Order(){
+    orderID = "No ID entered";
+    orderDate = "No date entered";
+    totalPrice = 0.0;
+}
+Order::Order(string porderID, string porderDate, double ptotalPrice, Registered_Customer * pregCus, Equipment *pequip, Food_Supplement *psupple){
+    orderID = porderId;
+    orderDate = porderDate;
+    totalPrice = ptotalPrice;
+    regCus = pregCus;
+    equip = pequip;
+    supple = psupple;
+    cout << "Constructor executed" << endl;
+}
+void Order::addOrderDetails(){}
+double Order::calcTotal(){
+    return 0.0;
+}
+void Order::displayOrderDetails(){}
+void Order::addPayment(){}
+Order::~Order(){
+    cout << "Order deleted" << endl;
+}
 
 
 
