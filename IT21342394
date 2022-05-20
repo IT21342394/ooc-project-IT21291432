@@ -173,3 +173,41 @@ Food_supplement::~Food_supplement()
 }
 
 
+//main file
+
+int main(){
+//Creating objects
+    Registered_Customer* r1 = new Registered_Customer("Supun Imesh", "supunimesh00@gmail.com", "BSK1065", 0784629654);
+    Trainer* t1 = new Trainer("Deepal Alahakon", "T10956", "Deepal954@321");
+    CustomerServiceAgent* c1 = new CustomerServiceAgent("A5065", "C1099");
+    Doctor* d1 = new Doctor("Lalith Kumara", 0713973213, "D50987");
+    Blog *b1 = new Blog("B1050", "Healthy Foods", "2022-05-09", u1);
+    User *u1 = new User("Kavindu Thenuka", "kavinduthenu79@gmail.com", b1);
+    Order *o1 = new Order("O213", "2022-05-09", 1200, r1, e1, f1)
+    Equipment *e1 = new Equipment("E02", 6, 200);
+    FoodSupplement *f1 = new FoodSupplement("F03", 2, 600);
+
+    r1->printDetails();
+    cout<<"\n*******\n"<<endl;
+    t1->displaySessionDetails();
+    cout<<"\n*******\n"<<endl;
+    c1->displayAgentDetails();
+    cout<<"\n*******\n"<<endl;
+    b1->displayBlog();
+    cout<<"\n*******\n"<<endl;
+    e1->DisplayEquipmentDetails();
+    cout<<"\n*******\n"<<endl;
+    f1->DisplayFoodSupplementDetails();
+
+    //Delete objects
+    delete r1;
+    delete t1;
+    delete c1;
+    delete b1;
+    delete e1;
+    delete f1;
+
+    return 0;
+}
+
+
