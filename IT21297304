@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+//Declaring UserAccount class
+
+class UserAccount
+{
+	private:
+		string accountID;
+		string loginStatus;
+	public: 
+		UserAccount();
+		UserAccount(string aID, string lStatus);
+		void displayUserProgress();
+};
+
+//Implementing UserAccount class
+
+UserAccount::UserAccount()
+{
+	
+}
+
+UserAccount::UserAccount(string aID, string lStatus)
+{
+	accountID = aID;
+	loginStatus = lStatus;
+}
+
+void UserAccount::displayUserProgress()
+{
+	
+}
+
+
+
+//Declaring TrainingSessions class
+
+class TrainingSessions
+{
+	private:
+		string sessionID;
+		string sessionDate;
+	public:
+		TrainingSessions();
+		TrainingSessions(string sID, string sDate);
+		void display();
+};
+
+//Implementing TrainingSessions class
+
+TrainingSessions::TrainingSessions()
+{
+	
+}
+
+TrainingSessions::TrainingSessions(string sID, string sDate)
+{
+	sessionID = sID;
+	sessionDate = sDate;
+}
+
+void TrainingSessions::display()
+{
+
+}
